@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="shortcut icon" href="./icons8-calculator-47.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="calculator">
+      <div class="header">
+        <div>
+          <h1>Calculator</h1>
+        </div>
+        <div>
+          <label class="ui-switch">
+            <input type="checkbox" id="themeSwitch" />
+            <div class="slider">
+              <div class="circle"></div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <input type="text" id="display" readonly />
+
+      <div class="buttonSection">
+        <div class="btn">
+          <button class="darktheme" onclick="clearDisplay()">AC</button>
+        </div>
+        <div class="btn">
+          <button class="darktheme" onclick="appendToDisplay('.')">
+            <i class="fa-solid fa-circle"></i>
+          </button>
+        </div>
+        <div class="btn">
+          <button class="darktheme" onclick="deleteLast()">
+            <i class="fa-solid fa-delete-left"></i>
+          </button>
+        </div>
+        <div class="btn operator">
+          <button onclick="appendToDisplay('+')">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="btn">
+          <button class="darktheme" onclick="appendToDisplay('1')">1</button>
+        </div>
+        <div class="btn">
+          <button class="darktheme" onclick="appendToDisplay('2')">2</button>
+        </div>
+        <div class="btn">
+          <button class="darktheme" onclick="appendToDisplay('3')">3</button>
+        </div>
+        <div class="btn operator">
+          <button onclick="appendToDisplay('-')">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+        </div>
+        <div class="btn">
+          <button class="darktheme" onclick="appendToDisplay('4')">4</button>
+        </div>
+        <div class="btn">
+          <button class="darktheme" onclick="appendToDisplay('5')">5</button>
+        </div>
+        <div class="btn">
+          <button class="darktheme" onclick="appendToDisplay('6')">6</button>
+        </div>
+        <div class="btn operator">
+          <button onclick="appendToDisplay('*')">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="btn">
+          <button class="darktheme" onclick="appendToDisplay('7')">7</button>
+        </div>
+        <div class="btn">
+          <button class="darktheme" onclick="appendToDisplay('8')">8</button>
+        </div>
+        <div class="btn">
+          <button class="darktheme" onclick="appendToDisplay('9')">9</button>
+        </div>
+        <div class="btn operator">
+          <button onclick="appendToDisplay('/')">
+            <i class="fa-solid fa-divide"></i>
+          </button>
+        </div>
+        <div class="btn">
+          <button class="darktheme" onclick="appendToDisplay('0')">0</button>
+        </div>
+        <div class="btn" style="grid-column: span 3">
+          <button onclick="calculate()">
+            <i class="fa-solid fa-equals"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
